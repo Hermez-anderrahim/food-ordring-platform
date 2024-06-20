@@ -1,7 +1,6 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +12,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('/home', function () {
     return view('home');
 });
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::post('/submit-order' , [OrderController::class , "viewForm"])->name("form.submit");

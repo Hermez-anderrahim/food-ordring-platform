@@ -248,8 +248,6 @@
                 
             }
             .infoSection2 > .secondColumn{
-                /* display: flex;
-                flex-direction: column; */
                 width: 40%;
             }
            
